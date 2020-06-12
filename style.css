@@ -1,0 +1,87 @@
+body{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+button{
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	outline: none;
+	background-color: transparent;
+	box-shadow: 0px 10px 12px rgba(0,0,0,0.5)
+}
+.remove{
+	border: 1px solid red;
+	position: relative;
+	transition: 200ms;
+}
+.add{
+	border: 1px solid green;
+	transition:200ms;
+	position: relative;
+}
+
+.remove:hover{
+	background-color: red;
+	transform: translate(0,-10px);
+	box-shadow: 0px 15px 12px rgba(0,0,0,0.5)
+}
+.add:hover{
+	background-color: green;
+	transform:translate(0,-10px);
+	box-shadow: 0px 15px 12px rgba(0,0,0,0.5)
+}
+
+.remove:before {
+	content:'Remove';
+	position: absolute;
+	top: 0%;
+	background-color: transparent;
+	padding: 8px 16px;
+	transform: translate(-50%);
+	opacity: 0;
+	transition: 300ms ease all;
+	border-radius: 10px;
+	color: white;
+	border:1px solid red;
+}
+.add:before {
+	content:'Add';
+	position: absolute;
+	top: 0%;
+	background-color: transparent;
+	padding: 8px 16px;
+	transform: translate(-50%);
+	opacity: 0;
+	transition: 300ms ease all;
+	border-radius: 10px;
+	color: white;
+	border:1px solid green;
+
+
+}
+.remove:hover:before{
+	top:-50%;
+	opacity: 1;
+
+}
+.add:hover:before{
+	top:-50%;
+	opacity: 1;
+}
+
+.add:active{
+	background-color: green;
+	transform:translate(-10px,10px);
+	box-shadow: 0px 15px 12px rgba(0,0,0,0.5)
+}
+.remove:active{
+	background-color: red;
+	transform: translate(-10px,10px);
+	box-shadow: 0px 15px 12px rgba(0,0,0,0.5)
+}
+
